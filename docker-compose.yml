@@ -105,4 +105,4 @@ services:
       "--enable-feature=exemplar-storage"
     ]
     ports:
-      - "9090:9090"
+      - "9091:9090"
