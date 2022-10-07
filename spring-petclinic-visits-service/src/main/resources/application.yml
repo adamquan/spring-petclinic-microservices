@@ -11,3 +11,14 @@ spring:
     activate:
       on-profile: docker
     import: configserver:http://config-server:8888
+
+---
+spring:
+  sleuth:
+    enabled: true
+    otel:
+      config:
+        trace-id-ratio-based: 1.0
+      exporter:
+        otlp:
+          endpoint: http://tracing-server:4317
